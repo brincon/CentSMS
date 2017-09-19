@@ -22,16 +22,17 @@ class CentauroSMS
     /**
      * Obtener numero de SMS disponibles
      */
-    public function get_sms_disponibles()
+    public function get_sms_available()
     {
-       $credenciales = $this->cParametros(array(
+       $credenciales = $this->cParametros(
+           [
             'client_id' => $this->client_id,
             'client_secret' => $this->client_secret,
-			'client_opcion' => 'sms_disponibles'));
+            'client_opcion' => 'sms_disponibles'
+            ]
+        );
 
-       $result_data = cSMSClient::post("/controllersms/", $credenciales, "application/x-www-form-urlencoded");
-	$result_data["response"]["sms_available"]
-	return $result_data
+        return $result_data = cSMSClient::post("/controllersms/", $credenciales, "application/x-www-form-urlencoded");
     }
     /**
      * Envio de SMS Masivos normales
