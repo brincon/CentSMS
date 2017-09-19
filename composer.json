@@ -1,8 +1,8 @@
 {
     "name": "brincon/CentSMS",
-    "type": "project",
+    "type": "library",
     "authors": [{
-        "name": "Hernan Crespo",
+        "name": "Brayan Rincon",
         "email": "brayan262@gmail.com"
     }],
     "require": {
